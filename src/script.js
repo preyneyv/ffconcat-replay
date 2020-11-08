@@ -228,4 +228,5 @@ function startManager() {
         .watch(config.directory.replace(/\\/g, '/'))
         .on('add', () => fetchListing())
     fetchListing()
+    enqueuePlaylist()
 }
