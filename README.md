@@ -11,6 +11,12 @@ be beneficial to other people in a similar situation to mine. I mention this to
 make it clear that *this project will **NOT** be actively maintained.* You are
 free, however, to fork it and do with it what you please.
 
+**Disclaimer:** I cannot guarantee the software will work 100% of 
+the time. In my own testing, it has worked fine to the point that I am
+comfortable offering it as a tool to the community. However, I do not take any
+responsibility of any kind for anything that goes wrong due to the usage of
+this software. Refer to [LICENSE.md](LICENSE.md) for the full disclaimer
+
 I've written the reasoning for the existence of FFCRM (I need a better
 abbreviation) at the bottom of the file if you're interested in more background. 
 
