@@ -3,7 +3,7 @@
 ![ffcrm-usage.png](img/ffcrm-usage.png)
 
 A hacky way to get a much nicer-looking instant replay working in free open
-source software.
+source software. You can watch a demo of the resulting stream [here](https://www.youtube.com/watch?v=rmDBHsLfZVo).
 
 **Note**:
 I wrote this program for a very specific use-case I had, but I thought it might
