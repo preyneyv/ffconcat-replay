@@ -1,0 +1,269 @@
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+    margin: 0;
+}
+
+#configuration-popup {
+    position: fixed;
+    color: black;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#configuration-body {
+    background: white;
+    padding: 16px;
+    border-radius: 4px;
+    width: 300px;
+}
+
+#configuration-body h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.input {
+    display: block;
+    margin: 12px 0;
+}
+
+.input span {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+}
+.input input {
+    display: block;
+    width: 100%;
+    padding: 12px 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+}
+.btn {
+    font: inherit;
+    font-size: 14px;
+    padding: 8px 16px;
+    background: #ccc;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    cursor: pointer;
+    color: black;
+}
+.btn-confirm {
+    background: #505050;
+    color: white;
+}
+.btn-confirm:hover {
+    background: #348625;
+}
+.btn-warn {
+    background: #505050;
+    color: white;
+}
+.btn-warn:hover {
+    background: rgb(182, 56, 56);
+
+}
+
+#title {
+    cursor: pointer;
+}
+
+#configuration-popup.hide {
+    display: none;
+}
+
+#replay-clips-container {
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+#replay-clips-container header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+#replay-clips-container h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#replay-clips-scroller {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    overflow-y: scroll;
+    padding-bottom: 64px;
+}
+
+#replay-clips {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.small-column {
+    width: 1px;
+}
+.clip-tags {
+    text-align: right;
+}
+
+.clip-name span {
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    width: calc(100vw - 350px);
+
+}
+
+#replay-clips tr {
+    background: #333;
+}
+
+#replay-clips tr:nth-child(2n) {
+    background: #151515;
+}
+
+#replay-clips tr.selected {
+    background: #bbb;
+    color: black;
+    font-weight: bold;
+    /*background: rgba(128, 196, 113, 0.47);*/
+}
+
+#replay-clips tr.selected:nth-child(2n) {
+    background: #ddd;
+    /*background: rgba(80, 144, 64, 0.47);*/
+}
+
+
+#replay-clips td {
+    padding: 6px 8px;
+    height: 34px;
+    box-sizing: border-box;
+}
+
+#replay-clips button {
+    border: 0;
+    background: #505050;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#replay-clips button:hover {
+    background: rgb(182, 56, 56);
+}
+
+#replay-clips .clip-tags .tag {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.tag {
+    --tag-color: #555;
+    font-size: 12px;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    background: var(--tag-color);
+}
+#replay-clips .tag.deselected {
+    background: #555;
+}
+#replay-clips .tag.deselected:hover {
+    background: #444;
+}
+
+
+#replay-clips .tag:not(.deselected) {
+    box-shadow: 0 0 18px -1px var(--tag-color);
+}
+
+.tag-neutral {
+    --tag-color: #555;
+}
+
+.tag-0 {
+    --tag-color: #784fc4;
+    color: white;
+}
+
+.tag-1 {
+    --tag-color: #4f7ec4;
+    color: white;
+}
+
+.tag-2 {
+    --tag-color: #19af63;
+    color: white;
+}
+
+.tag-3 {
+    --tag-color: #f38d0a;
+    color: white;
+}
+
+.tag-4 {
+    --tag-color: #bb1212;
+    color: white;
+}
+
+.tag-picker {
+    margin-right: 4px;
+}
+.tag-picker option {
+    padding: 8px;
+}
+
+
+#replay-clips-selector {
+    display: flex;
+    padding: 0 16px 16px;
+    font-size: 14px;
+    align-items: center;
+}
+#replay-clips-selector .tag {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#replay-clips-container footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8px;
+}
+
+#replay-clips-container footer .status {
+    padding-left: 8px;
+}
+#replay-clips-container footer .actions {
+    display: flex;
+}
+
+#replay-clips-container footer .actions > * {
+    margin: 0 8px;
+}
+
+

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FFConcat Replay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div id="configuration-popup">
+    <div id="configuration-body">
+        <h1>FFConcat Replay</h1>
+        <form id="configuration-form">
+            <label class="input">
+                <span>Session Directory</span>
+                <input required type="text" placeholder="Z:\Recordings" id="configuration-directory">
+            </label>
+            <label class="input">
+                <span>FFConcat Playlist File</span>
+                <input required type="text" placeholder="playlist.txt" id="configuration-playlist">
+            </label>
+            <label class="input">
+                <span>Filter Pattern (regex)</span>
+                <input required type="text" placeholder="Replay*" id="configuration-pattern">
+            </label>
+            <label class="input">
+                <span>Clip Duration (seconds)</span>
+                <input required type="number" min="0" placeholder="10" id="configuration-duration">
+            </label>
+            <label class="input">
+                <span>Tags (up to 5, comma-separated)</span>
+                <input type="text" placeholder="goal,miss,shot" id="configuration-tags">
+            </label>
+            <input type="submit" class="btn btn-confirm" value="Start">
+        </form>
+    </div>
+</div>
+<div id="replay-clips-container">
+    <header>
+        <h1 id="title">FFConcat Replay Manager</h1>
+        <button id="hide-all" class="btn btn-warn">Hide All</button>
+    </header>
+    <div id="replay-clips-selector">
+        <span>Select:</span>
+    </div>
+    <div id="replay-clips-scroller">
+        <table id="replay-clips">
+            <colgroup>
+                <col class="small-column">
+                <col class="small-column">
+                <col>
+                <col class="small-column">
+            </colgroup>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <span id="selection-status" class="status">0 clips selected</span>
+        <div class="actions">
+            <div id="clear-selection" class="btn">Clear</div>
+            <div id="enqueue-selection" class="btn btn-confirm">Enqueue</div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
