@@ -17,8 +17,7 @@ abbreviation) at the bottom of the file if you're interested in more background.
 ### Setup
 #### In OBS Studio's Settings
 1. `Output > Replay Buffer`  
-Enable the Replay Buffer and set the replay time to a 
-specific length.  
+Enable the Replay Buffer and set the replay time to a specific length.    
 ![step-1.png](img/step-1.png)
 2. `Output > Recording`  
 Enable "Generate File Name without Space". (Note that this is a limitation
@@ -26,7 +25,7 @@ of OBS' FFmpeg implementation and there's nothing I can do to work around it.)
 ![step-2.png](img/step-2.png)
 3. `Hotkeys`  
 Set up a hotkey for "Save Replay Buffer". This is your "something cool just
-happened" button, so make sure it isn't a button you normally use.
+happened" button, so make sure it isn't a button you normally use.  
 ![step-3.png](img/step-3.png)
 4. `Advanced`  
 Set your Replay Buffer Filename Prefix to something. This can literally be 
